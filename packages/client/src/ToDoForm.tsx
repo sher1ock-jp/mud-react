@@ -3,6 +3,13 @@ import { FormButton, FormField, FormFieldWrapper } from "./theme";
 import { Plus } from "./theme/Plus";
 
 export function ToDoForm() {
+  const {
+    systemCalls: {
+      addToDo(newToDo);
+    },
+  } = useMUD();
+
+
   const [newToDo, setNewToDo] = useState("");
 
   return (
@@ -10,7 +17,9 @@ export function ToDoForm() {
       <FormField type="text" placeholder="new todo" value={newToDo} onChange={(e) => {
         setNewToDo(e.target.value);
       }} />
-      <FormButton>
+      <FormButton onClick={() => {
+
+      }}>
         <Plus />
       </FormButton>
     </FormFieldWrapper>

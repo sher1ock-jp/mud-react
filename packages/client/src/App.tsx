@@ -10,6 +10,7 @@ import {
   Footer,
   TextLink,
 } from "./theme";
+import { ToDoForm } from "./ToDoForm";
 
 export const App = () => {
   return (
@@ -21,6 +22,7 @@ export const App = () => {
         </HeaderDiv>
 
         <Card>
+          <ToDoForm />
         </Card>
 
         <Footer>
